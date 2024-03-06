@@ -11,8 +11,11 @@ let consumInstant = document.querySelector("#consum__instant");
 let consumFinal = document.querySelector("#consumfinal");
 
 butonCalc.addEventListener("click", function () {
+  if (litri.value == "" || km.value("")) {
+    alert("introdu valoare!");
+    return;
+  }
   let result = (100 * litri.value) / km.value;
-
   consumFinal.innerHTML = result.toFixed(1);
 });
 
